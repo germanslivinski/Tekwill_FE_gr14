@@ -18,5 +18,6 @@
  
  - [Основной синтаксис Markdown](https://www.markdownguide.org/basic-syntax) 
  
- Кроме того, вы можете найти более подробный список функций синтаксиса Markdown по адресу: - [Полное руководство по синтаксису Markdown](https://www.markdownguide.org/extended-syntax) 
+ Кроме того, вы можете найти более подробный список функций синтаксиса Markdown по адресу:
+ - [Полное руководство по синтаксису Markdown](https://www.markdownguide.org/extended-syntax) 
 

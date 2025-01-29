@@ -1,20 +1,66 @@
+html{
+    font-size: 16px;
+}
 #h1 {
     color: blue;
     text-transform: uppercase;
     text-decoration: underline;
+    font-size: 4rem;
+    background-color: rgba(252, 252, 252, 0.5)
 }
 p {
     color: lightgreen;
+    font-size: 1.2em;
 
 }
 h2 {
     color: lightblue;
+    font-size: 3rem;
 }
-
+h3 {
+    color: lightblue;
+    font-size: 2rem;
+}
 .title {
     color: blueviolet;
     font-family: sans-serif;
 }
-h3 {
-    color: lightblue;
+
+a:hover {
+    color: green;
+
 }
+h2:first-of-type {
+    color: darkorange;
+  }
+
+  ol li:nth-child(even) {
+    color: rosybrown;
+  }
+
+  ul li:nth-last-child(2) {
+    color: rosybrown;
+  }
+  nav a {
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  nav a:hover {
+    background-color:rgb(37, 240, 240);
+    color: blueviolet;
+    
+  }
+  nav a::before {
+    content: "*";
+    color: yellow; 
+    margin-right: 8px
+  }
+
+  nav a::after {
+    content: "*";
+    color: yellow;
+    margin-left: 8px
+  }
+  img[alt*="div class"] {
+    width: calc(50% + 150px);
+  }

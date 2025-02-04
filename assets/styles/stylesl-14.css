@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+/* Контейнер */
+.tooltip-container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    border: 2px solid blue;
+    background: white;
+    position: absolute;
+    left: -100%; 
+    animation: slideIn 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideIn {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid red;
+    cursor: pointer;
+    background: #fff;
+    font-weight: bold;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 150px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 10;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    border-width: 8px;
+    border-style: solid;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.tooltip.top .tooltip-text {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+.tooltip.top .tooltip-text::after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: gray transparent transparent transparent;
+}
+
+.tooltip.right .tooltip-text {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+.tooltip.right .tooltip-text::after {
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: transparent gray transparent transparent;
+}
+
+
+.tooltip.bottom .tooltip-text {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+.tooltip.bottom .tooltip-text::after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent transparent gray transparent;
+}
+
+.tooltip.left .tooltip-text {
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+}
+.tooltip.left .tooltip-text::after {
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: transparent transparent transparent gray;
+}
